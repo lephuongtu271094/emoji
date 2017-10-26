@@ -1,0 +1,23 @@
+{
+    "hosting": {
+        "public": "/",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ],
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ],
+        "headers": [ {
+            "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css|ogg)",
+            "headers" : [ {
+              "key" : "X-Goog-Upload-Command",
+              "value" : "*"
+          } ]
+        }]
+    }
+}
